@@ -17,7 +17,7 @@ const ItemDetail = ({id, name, img, category, price, description, stock}) => {
           addItem(productObj)
           Swal.fire({
                     position: "top-end",
-                    title: `Agregaste: ${count} ${name}`,
+                    text: `Agregaste ${count} ${name}`,
                     showConfirmButton: false,
                     timer: 1500,
                     width:250,
@@ -30,8 +30,8 @@ const ItemDetail = ({id, name, img, category, price, description, stock}) => {
                     
                     
           <section className="container">
-                    <article className="row text-center font">
-                              <div className="card m-3">
+                    <article className="row text-center font shadow-lg p-3 mb-5 bg-white rounded">
+                              <div className=" mt-5 m-3">
                               <img src={img} className="card-img-top mx-auto rounded mt-3" style={{width: 300 }} />
                               <div className="card-body">
                               <h1 className="card-title mt-3 mb-3">{name}</h1>

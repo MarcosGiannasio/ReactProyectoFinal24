@@ -8,9 +8,9 @@ const Cart = () => {
           const total = getTotal()
 
           if (totalQuantity === 0) {
-                    return <div className="text-center mt-5 h3"> 
-                              <h1 >No hay items en el carrito :´( </h1>
-                              <Link to={"/"}  className="btn btn-secondary mt-5">Explorar</Link>
+                    return <div className="text-center mt-5 h3" style={{height:310}}> 
+                              <h1 className="font">No hay items en el carrito :´( </h1>
+                              <Link to={"/"}  className="btn btn-secondary mt-5 mb-5">Explorar</Link>
                     </div>
           }
           return (
@@ -22,7 +22,7 @@ const Cart = () => {
                                         ))}
                     
                     
-                              <section className="text-center mb-5">
+                              <section className=" text-center mb-5">
                               <h4 className="mt-4">Total: $ {total}</h4>
                               <div className="mb-1">
                               <button className="mt-4 btn btn-terciary h5" onClick={()=> clearCart()}>Limpiar Carrito</button>

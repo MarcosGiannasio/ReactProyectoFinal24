@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
-import { QueryDocumentSnapshot, doc, getDoc} from "firebase/firestore";
+import { doc, getDoc} from "firebase/firestore";
 import { db } from "../../services/firebase";
 
 
@@ -30,9 +30,9 @@ const ItemDetailContainer = () => {
           return (
                     <div>
                              { loading ? 
-                    <div class="text-center">
+                    <div class="text-center" style={{height:350}}>
                     <div class="spinner-border mt-5 " role="status"></div>
-                    <div>cargando detalle...</div>
+                    <div className="font">cargando detalle...</div>
                     </div> : <ItemDetail {...product} />}
                     </div>
           )

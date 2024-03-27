@@ -17,13 +17,14 @@ const ItemCount = ({ initial = 1, stock, onAdd}) => {
           }
 
           return (
-                    <div className="card d-inline-block">
-                              <div className="d-flex gap-2 align-items-center justify-content-center">
-                              <button onClick={decrement}> ➖ </button>
-                              <h1 className="h4">{count}</h1>
-                              <button onClick={increment}> ➕ </button>
+                    <div className="d-inline-block">
+                              <div className="d-flex gap-2 align-items-center justify-content-center" style={{fontSize:10}}>
+                              <button className="rounded" onClick={decrement}> ➖ </button>
+                              <h1 className="h4 mt-2" style={{fontSize:18}}>{count}</h1>
+                              <button className="rounded" onClick={increment}> ➕ </button>
                               </div>
-                              <button className='butons btn btn-outline-secondary btn-sm my-3' disabled={stock <= 0} onClick={()=> onAdd(count) }>Agregar al carrito</button>
+                              <button className='butons btn btn-outline-secondary btn-sm my-3' 
+                              disabled={stock <= 0} onClick={()=> onAdd(count) }>Agregar al carrito</button>
 
                     </div>
           );

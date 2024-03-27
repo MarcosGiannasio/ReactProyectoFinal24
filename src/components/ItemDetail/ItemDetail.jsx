@@ -28,7 +28,7 @@ const ItemDetail = ({id, name, img, category, price, description, stock}) => {
 };
           return (
                     
-                    
+          
           <section className="container">
                     <article className="row text-center font shadow-lg p-3 mb-5 bg-white rounded">
                               <div className=" mt-5 m-3">
